@@ -163,7 +163,7 @@ def main():
 
         tls_versions = check_tls_support(dominio)
         if tls_versions:
-            tls_versions = [tls_versions.get(protocol, Fore.GREEN + "-" + Fore.WHITE) for protocol in [ssl.PROTOCOL_TLSv1, ssl.PROTOCO
+            tls_versions = [tls_versions.get(protocol, Fore.GREEN + "-" + Fore.WHITE) for protocol in [ssl.PROTOCOL_TLSv1, ssl.PROTOCOL_TLSv1_1, ssl.PROTOCOL_TLSv1_2]]
             row.extend(tls_versions)
         else:
             row.extend(["No se pudo obtener información"] * 3)
